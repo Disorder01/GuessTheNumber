@@ -1,0 +1,21 @@
+nav {
+    width: 100%;
+    background-color: royalblue;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+}
+
+li {
+    margin: 15px;
+    height: 40px;
+    width: 60px;
+    background-color: darkgray;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+}
