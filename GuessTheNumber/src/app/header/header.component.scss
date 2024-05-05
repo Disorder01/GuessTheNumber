@@ -5,7 +5,6 @@ nav {
 
 ul {
     display: flex;
-    flex-direction: row;
     list-style: none;
     justify-content: center;
 }
@@ -17,6 +16,7 @@ li {
     background-color: darkgray;
     color: black;
     text-align: center;
+    align-items: center;
     border-radius: 10px;
     cursor: pointer;
     &:hover {
@@ -26,4 +26,5 @@ li {
 
 .active {
     background-color: lightblue;
+    color: white;
 }
