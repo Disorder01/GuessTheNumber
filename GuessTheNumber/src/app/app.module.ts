@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { GameComponent } from './game/game.component';
 import { TutorialComponent } from './tutorial/tutorial.component';
 import { ChooseDifficultyComponent } from './game/choose-difficulty/choose-difficulty.component';
+import { GameplayComponent } from './game/gameplay/gameplay.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ChooseDifficultyComponent } from './game/choose-difficulty/choose-diffi
     HeaderComponent,
     GameComponent,
     TutorialComponent,
-    ChooseDifficultyComponent
+    ChooseDifficultyComponent,
+    GameplayComponent
   ],
   imports: [
     BrowserModule,
