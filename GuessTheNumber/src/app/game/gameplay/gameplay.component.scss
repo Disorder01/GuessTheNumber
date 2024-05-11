@@ -1,0 +1,30 @@
+.overAll {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 600px;
+    width: 1200px;
+    background-color: gray;
+}
+
+.overAll h2 {
+    padding-top: 30px;
+    font-size: 50px;
+}
+
+.playArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.playArea input {
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+}
+
+.headLabel {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
