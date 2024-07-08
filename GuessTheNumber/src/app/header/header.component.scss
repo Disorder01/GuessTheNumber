@@ -1,6 +1,8 @@
+@import 'colors';
+
 nav {
     width: 100%;
-    background-color: royalblue;
+    background-color: $primary-color;
 }
 
 ul {
@@ -13,19 +15,20 @@ li {
     margin: 15px;
     height: 40px;
     width: 60px;
-    background-color: darkgray;
+    background-color: $secondary-color;
     color: black;
     text-align: center;
     align-items: center;
     border-radius: 10px;
     cursor: pointer;
     &:hover {
-        background-color: lightblue;
+        background-color: $accent-color;
+        color: $text-color;
     }
 }
 
 .active {
-    background-color: lightblue;
+    background-color: $accent-color;
     border: 2px solid black;
-    color: white;
+    color: $text-color;
 }
