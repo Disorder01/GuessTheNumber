@@ -1,0 +1,39 @@
+@import 'colors';
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    width: 100%;
+    color: $text-color;
+}
+
+.item {
+    display: flex;
+}
+
+.welcome {
+    height: 40vh
+}
+
+.infoContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+}
+
+.infoItem {
+    display: flex;
+    background-color: $secondary-color;
+}
+
+.infoText {
+    text-align: center;
+    font-size: 22px;
+    margin: 15px;
+}
