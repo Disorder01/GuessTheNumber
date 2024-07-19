@@ -2,6 +2,11 @@
     <h2>Guess The Number</h2>
         <div class="playArea">
             <label class="headLabel">Youre Number:</label>
-            <input type="number">
+            <input type="number" [(ngModel)]="guessedNumber">
+            <button (click)="guessNumber()">Guess!</button>
+        </div>
+
+        <div class="answerArea">
+            <p> {{ answer }} </p>
         </div>
 </div>

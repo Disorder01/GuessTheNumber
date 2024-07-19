@@ -9,6 +9,7 @@ import { GameComponent } from './game/game.component';
 import { TutorialComponent } from './tutorial/tutorial.component';
 import { ChooseDifficultyComponent } from './game/choose-difficulty/choose-difficulty.component';
 import { GameplayComponent } from './game/gameplay/gameplay.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GameplayComponent } from './game/gameplay/gameplay.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
