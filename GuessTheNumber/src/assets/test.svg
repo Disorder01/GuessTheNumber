@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient1">
+      <stop
+         style="stop-color:#000080;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#000080;stop-opacity:1"
+         offset="0.31478751"
+         id="stop4" />
+      <stop
+         style="stop-color:#0000ff;stop-opacity:1"
+         offset="0.82215881"
+         id="stop3" />
+      <stop
+         style="stop-color:#000080;stop-opacity:0;"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient1"
+       id="linearGradient2"
+       x1="12.661388"
+       y1="60.41291"
+       x2="62.94519"
+       y2="99.844093"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient1"
+       id="linearGradient4"
+       gradientUnits="userSpaceOnUse"
+       x1="12.661388"
+       y1="60.41291"
+       x2="62.94519"
+       y2="99.844093"
+       gradientTransform="translate(43.836629,93.637991)" />
+    <linearGradient
+       xlink:href="#linearGradient1"
+       id="linearGradient5"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(91.209866,-38.67862)"
+       x1="12.661388"
+       y1="60.41291"
+       x2="62.94519"
+       y2="99.844093" />
+    <linearGradient
+       xlink:href="#linearGradient1"
+       id="linearGradient6"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(156.26816,62.179499)"
+       x1="12.661388"
+       y1="60.41291"
+       x2="62.94519"
+       y2="99.844093" />
+    <linearGradient
+       xlink:href="#linearGradient1"
+       id="linearGradient7"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(220.37341,-18.501176)"
+       x1="12.661388"
+       y1="60.41291"
+       x2="62.94519"
+       y2="99.844093" />
+  </defs>
+  <g
+     id="layer1">
+    <ellipse
+       style="fill:url(#linearGradient2);stroke-width:0.264583;fill-opacity:1"
+       id="path1"
+       cx="35.451889"
+       cy="73.074303"
+       rx="28.21681"
+       ry="26.408039" />
+    <ellipse
+       style="fill:url(#linearGradient4);fill-opacity:1;stroke-width:0.264583"
+       id="path1-1"
+       cx="79.288521"
+       cy="166.7123"
+       rx="28.21681"
+       ry="26.408039" />
+    <ellipse
+       style="fill:url(#linearGradient5);fill-opacity:1;stroke-width:0.264583"
+       id="path1-1-9"
+       cx="126.66176"
+       cy="34.395687"
+       rx="28.21681"
+       ry="26.408039" />
+    <ellipse
+       style="fill:url(#linearGradient6);fill-opacity:1;stroke-width:0.264583"
+       id="path1-1-9-4"
+       cx="191.72005"
+       cy="135.2538"
+       rx="28.21681"
+       ry="26.408039" />
+    <ellipse
+       style="fill:url(#linearGradient7);fill-opacity:1;stroke-width:0.264583"
+       id="path1-1-9-4-1"
+       cx="255.8253"
+       cy="54.573124"
+       rx="28.21681"
+       ry="26.408039" />
+  </g>
+</svg>

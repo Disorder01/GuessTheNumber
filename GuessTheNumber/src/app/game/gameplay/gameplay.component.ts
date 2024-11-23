@@ -17,6 +17,8 @@ export class GameplayComponent implements OnInit {
   lastNumber: number = 10;
   randomNumber: number = 0;
   guessedNumber: number = 0;
+  showResult: boolean = false;
+  
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
@@ -42,12 +44,22 @@ export class GameplayComponent implements OnInit {
     
     console.log(this.randomNumber)
 
+     if(this.difficulty == undefined) {
+      alert("Please select difficulty!")
+      return;
+     }
+
     if(this.guessedNumber == this.randomNumber) {
       console.log('Correct!');
+      this.showResult = true;
     } else if (this.guessedNumber < this.randomNumber) {
       console.log('To low!');
+      this.showResult = true;
     } else if(this.guessedNumber > this.randomNumber) {
       console.log('to high!');
+      this.showResult = true;
+
+
     }
   }
 }
