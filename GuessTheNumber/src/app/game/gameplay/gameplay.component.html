@@ -2,14 +2,19 @@
     <h2>Guess The Number</h2>
         <div class="playArea">
             <label class="headLabel">Youre Number:</label>
-            <input type="number" [(ngModel)]="guessedNumber">
+            <input type="number" id="playAreaInput" [(ngModel)]="guessedNumber" [ngClass]="{'wrongInput': !isCorrect && showResult}">
             <button (click)="guessNumber()">Guess!</button>
         </div>
 
         <div class="answerArea">
             <p> {{ answer }} </p>
             <div class="resultArea" *ngIf="showResult">
-                <p>test</p>
+                <div class="correct" *ngIf="isCorrect">
+                    <p>Yes</p>
+                </div>
+                <div class="wrong" *ngIf="!isCorrect && showResult">
+                    <p> {{ resultMessage }} </p>
+                </div>
             </div>
         </div>
         

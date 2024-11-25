@@ -4,8 +4,8 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    height: 600px;
-    width: 1200px;
+    height: 100%;
+    width: 70%;
     background-color: $primary-color;
 }
 
@@ -26,12 +26,21 @@
     font-size: 50px;
 }
 
+.wrongInput {
+    background-color: red;
+    border: 2px solid red;
+}
+
 .headLabel {
     font-size: 40px;
     margin-bottom: 25px;
 }
 
+// .answerArea {
+
+// }
+
 .resultArea {
-    background-color: aqua;
-    height: 60%;
+    background-color: $secondary-color;
+    height: 120px;
 }
