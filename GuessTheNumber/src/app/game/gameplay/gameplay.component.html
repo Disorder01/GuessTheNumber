@@ -1,21 +1,21 @@
 <div class="overAll">
     <h2>Guess The Number</h2>
-        <div class="playArea">
-            <label class="headLabel">Youre Number:</label>
-            <input type="number" id="playAreaInput" [(ngModel)]="guessedNumber" [ngClass]="{'wrongInput': !isCorrect && showResult}">
-            <button (click)="guessNumber()">Guess!</button>
-        </div>
+    <div class="playArea">
+        <label class="headLabel">Your Number:</label>
+        <input type="number" id="playAreaInput" [(ngModel)]="guessedNumber" 
+               [ngClass]="{'wrongInput': showHighlight, 'rightInput': showOtherHighlight}">
+        <button (click)="guessNumber()">Guess!</button>
+    </div>
 
-        <div class="answerArea">
-            <p> {{ answer }} </p>
-            <div class="resultArea" *ngIf="showResult">
-                <div class="correct" *ngIf="isCorrect">
-                    <p>Yes</p>
-                </div>
-                <div class="wrong" *ngIf="!isCorrect && showResult">
-                    <p> {{ resultMessage }} </p>
-                </div>
+    <div class="answerArea">
+        <p>{{ answer }}</p>
+        <div class="resultArea" *ngIf="showResult" [ngClass]="{'wrongInput': showHighlight, 'rightInput': showOtherHighlight}">
+            <div class="correct" *ngIf="isCorrect">
+                <p>Yes</p>
+            </div>
+            <div class="wrong" *ngIf="!isCorrect && showResult">
+                <p>{{ resultMessage }}</p>
             </div>
         </div>
-        
+    </div>
 </div>

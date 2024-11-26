@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-gameplay',
@@ -8,8 +7,6 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './gameplay.component.scss'
 })
 export class GameplayComponent implements OnInit {
-
-  constructor(private route: ActivatedRoute) {}
 
   difficulty: string = '';
   answer: string = 'test';
@@ -20,9 +17,15 @@ export class GameplayComponent implements OnInit {
   guessedNumber: number = 0;
   showResult: boolean = false;
   isCorrect: boolean = false;
+  showHighlight: boolean = false;
+  showOtherHighlight: boolean = false;
   isToLow: boolean = false;
   isToHigh: boolean = false;
-  
+
+  private readonly HIGHLIGHT_TIMEOUT: number = 500;
+  private readonly HIGHLIGHT_REPETITIONS: number = 3; 
+
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
@@ -30,7 +33,7 @@ export class GameplayComponent implements OnInit {
       console.log(this.difficulty);
     });
 
-    switch(this.difficulty) {
+    switch (this.difficulty) {
       case 'easy': 
         this.lastNumber = 100;
         break;
@@ -44,49 +47,36 @@ export class GameplayComponent implements OnInit {
     this.randomNumber = Math.floor(Math.random() * (this.lastNumber - this.firstNumber + 1)) + this.firstNumber;
   }
 
-  guessNumber() {
-    
-    console.log(this.randomNumber)
+  guessNumber(): void {
+    console.log(this.randomNumber);
+    this.showResult = true;
+    this.isCorrect = this.guessedNumber === this.randomNumber;
 
-    if(this.guessedNumber == this.randomNumber) {
-      console.log('Correct!');
-      this.showResult = true;
-      this.isCorrect = true;
+    if (this.isCorrect) {
+      this.resultMessage = "Correct! You guessed the number!";
+      this.triggerHighlight('right');
     } else if (this.guessedNumber < this.randomNumber) {
-      console.log('To low!');
-      this.showResult = true;
-      this.isCorrect = false;
-      this.isToLow = true;
-      this.resultMessage = "Wrong! Youre number is to low!";
-    } else if(this.guessedNumber > this.randomNumber) {
-      console.log('to high!');
-      this.showResult = true;
-      this.isCorrect = false;
-      this.isToHigh = true;
-      this.resultMessage = "Wrong! Youre number is to high!";
+      this.resultMessage = "Wrong! Your number is too low!";
+      this.triggerHighlight('wrong', true);
+    } else {
+      this.resultMessage = "Wrong! Your number is too high!";
+      this.triggerHighlight('wrong', false);
     }
-
-    return "Invalid";
   }
 
-  applyHighlight() {
-    const element = document.getElementById("playAreaInput")!;
-    let count = 0;
-  
-    function addHighlight() {
-      if (count < 3) {
-        element.classList.add("highlight");
-  
-        setTimeout(() => {
-          element.classList.remove("highlight");
-          count++;
-          setTimeout(addHighlight, 100);
-        }, 1000);
+  private triggerHighlight(type: 'right' | 'wrong', isLowOrHigh: boolean = false): void {
+    const highlightType = type === 'right' ? 'showOtherHighlight' : 'showHighlight';
+    this[highlightType] = true;
+
+    let repetition = 0;
+
+    const highlightInterval = setInterval(() => {
+      if (repetition < this.HIGHLIGHT_REPETITIONS) {
+        this[highlightType] = !this[highlightType];
+        repetition++;
+      } else {
+        clearInterval(highlightInterval);
       }
-    }
-  
-    addHighlight();
+    }, this.HIGHLIGHT_TIMEOUT);
   }
-  
-  
 }
