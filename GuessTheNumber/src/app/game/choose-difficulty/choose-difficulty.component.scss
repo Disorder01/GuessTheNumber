@@ -3,16 +3,25 @@
 .gameBackground {
     height: 70%;
     width: 70%;
+    max-height: 300px;
     background-color: $primary-color;
     margin-left: auto;
     margin-right: auto;
 }
 
-.chooseMode {
+h2 {
     text-align: center;
 }
 
+.chooseMode {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .chooseMode button {
+    position: relative;
     height: 100px;
     width: 150px;
     margin: 50px;
@@ -22,7 +31,10 @@
     font-size: 30px;
     cursor: pointer;
     &:hover {
-        background-color: cornflowerblue;
+        background-color: $extra-color;
+        height: 110px;
+        width: 160px;
+        border: 2px solid black;
     }
 }
 

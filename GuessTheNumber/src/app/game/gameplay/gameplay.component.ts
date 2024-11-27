@@ -22,7 +22,7 @@ export class GameplayComponent implements OnInit {
   isToLow: boolean = false;
   isToHigh: boolean = false;
 
-  private readonly HIGHLIGHT_TIMEOUT: number = 500;
+  private readonly HIGHLIGHT_TIMEOUT: number = 300;
   private readonly HIGHLIGHT_REPETITIONS: number = 3; 
 
   constructor(private route: ActivatedRoute) {}
@@ -56,10 +56,10 @@ export class GameplayComponent implements OnInit {
       this.resultMessage = "Correct! You guessed the number!";
       this.triggerHighlight('right');
     } else if (this.guessedNumber < this.randomNumber) {
-      this.resultMessage = "Wrong! Your number is too low!";
+      this.resultMessage = "Your number is too low!";
       this.triggerHighlight('wrong', true);
     } else {
-      this.resultMessage = "Wrong! Your number is too high!";
+      this.resultMessage = "Your number is too high!";
       this.triggerHighlight('wrong', false);
     }
   }

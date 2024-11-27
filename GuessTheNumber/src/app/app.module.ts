@@ -10,6 +10,7 @@ import { TutorialComponent } from './tutorial/tutorial.component';
 import { ChooseDifficultyComponent } from './game/choose-difficulty/choose-difficulty.component';
 import { GameplayComponent } from './game/gameplay/gameplay.component';
 import { FormsModule } from '@angular/forms';
+import { InfoHoverComponent } from './game/info-hover/info-hover.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     GameComponent,
     TutorialComponent,
     ChooseDifficultyComponent,
-    GameplayComponent
+    GameplayComponent,
+    InfoHoverComponent
   ],
   imports: [
     BrowserModule,

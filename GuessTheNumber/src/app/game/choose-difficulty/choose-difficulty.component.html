@@ -1,8 +1,23 @@
 <div class="gameBackground">
+    <h2>Choose Gamemode</h2>
     <div class="chooseMode">
-        <h2>Choose Gamemode</h2>
-        <button [routerLink]="['/play']" [queryParams]="{ difficulty: 'easy' }" class="easy">Easy</button>
-        <button [routerLink]="['/play']" [queryParams]="{ difficulty: 'normal' }" class="normal">Normal</button>
-        <button [routerLink]="['/play']" [queryParams]="{ difficulty: 'hardcore' }" class="hard">Hardcore</button>
+            <div
+            (mouseenter)="isHoveringEasy = true"
+            (mouseleave)="isHoveringEasy = false">
+                <app-info-hover [endNumber]="100" *ngIf="isHoveringEasy"></app-info-hover>
+                <button [routerLink]="['/play']" [queryParams]="{ difficulty: 'easy' }" class="easy">Easy</button>
+            </div>
+            <div
+            (mouseenter)="isHoveringNormal = true"
+            (mouseleave)="isHoveringNormal = false">
+                <app-info-hover [endNumber]="500" *ngIf="isHoveringNormal"></app-info-hover>
+                <button [routerLink]="['/play']" [queryParams]="{ difficulty: 'normal' }" class="normal">Normal</button>
+            </div>
+            <div
+            (mouseenter)="isHoveringHard = true"
+            (mouseleave)="isHoveringHard = false">
+                <app-info-hover [endNumber]="1000" *ngIf="isHoveringHard"></app-info-hover>
+                <button [routerLink]="['/play']" [queryParams]="{ difficulty: 'hardcore' }" class="hard">Hardcore</button>
+            </div>
     </div>
 </div>

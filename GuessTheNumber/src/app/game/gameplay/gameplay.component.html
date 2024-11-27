@@ -4,7 +4,7 @@
         <label class="headLabel">Your Number:</label>
         <input type="number" id="playAreaInput" [(ngModel)]="guessedNumber" 
                [ngClass]="{'wrongInput': showHighlight, 'rightInput': showOtherHighlight}">
-        <button (click)="guessNumber()">Guess!</button>
+        <button class="guessButton" (click)="guessNumber()">Guess!</button>
     </div>
 
     <div class="answerArea">

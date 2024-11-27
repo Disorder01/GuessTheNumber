@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './choose-difficulty.component.scss'
 })
 export class ChooseDifficultyComponent {
-
+  isHoveringEasy = false;
+  isHoveringNormal = false;
+  isHoveringHard = false;
 }
