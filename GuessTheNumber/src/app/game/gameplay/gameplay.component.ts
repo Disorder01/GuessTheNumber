@@ -15,6 +15,7 @@ export class GameplayComponent implements OnInit {
   lastNumber: number = 10;
   randomNumber: number = 0;
   guessedNumber: number = 0;
+  counter: number = 0;
   showResult: boolean = false;
   isCorrect: boolean = false;
   showHighlight: boolean = false;
@@ -49,6 +50,7 @@ export class GameplayComponent implements OnInit {
 
   guessNumber(): void {
     console.log(this.randomNumber);
+    this.counter++;
     this.showResult = true;
     this.isCorrect = this.guessedNumber === this.randomNumber;
 

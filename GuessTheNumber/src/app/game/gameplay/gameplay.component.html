@@ -5,7 +5,13 @@
         <input type="number" id="playAreaInput" [(ngModel)]="guessedNumber" 
                [ngClass]="{'wrongInput': showHighlight, 'rightInput': showOtherHighlight}">
         <button class="guessButton" (click)="guessNumber()">Guess!</button>
+        <div class="countDisplay">
+            <p>Count: </p>
+            <p class="count"> {{ counter }} </p>
+        </div>
     </div>
+
+    
 
     <div class="answerArea">
         <p>{{ answer }}</p>
