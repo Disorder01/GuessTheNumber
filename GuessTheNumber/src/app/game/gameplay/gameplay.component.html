@@ -9,6 +9,10 @@
             <p>Count: </p>
             <p class="count"> {{ counter }} </p>
         </div>
+        <div class="showArrow">
+            <i *ngIf="isToLow" class="fa-solid fa-arrow-up"></i>
+            <i *ngIf="isToHigh" class="fa-solid fa-arrow-down"></i>
+        </div>
     </div>
 
     

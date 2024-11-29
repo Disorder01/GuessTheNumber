@@ -59,9 +59,13 @@ export class GameplayComponent implements OnInit {
       this.triggerHighlight('right');
     } else if (this.guessedNumber < this.randomNumber) {
       this.resultMessage = "Your number is too low!";
+      this.isToLow = true;
+      this.isToHigh = false;
       this.triggerHighlight('wrong', true);
     } else {
       this.resultMessage = "Your number is too high!";
+      this.isToHigh = true;
+      this.isToLow = false;
       this.triggerHighlight('wrong', false);
     }
   }
