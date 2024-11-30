@@ -11,6 +11,8 @@ import { ChooseDifficultyComponent } from './game/choose-difficulty/choose-diffi
 import { GameplayComponent } from './game/gameplay/gameplay.component';
 import { FormsModule } from '@angular/forms';
 import { InfoHoverComponent } from './game/info-hover/info-hover.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { InfoHoverComponent } from './game/info-hover/info-hover.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

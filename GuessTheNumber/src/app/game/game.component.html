@@ -1,4 +1,6 @@
 <app-choose-difficulty></app-choose-difficulty>
 @if (difficulty) {
-<app-gameplay></app-gameplay>
+<div @fadeInAnimation class="gameplayContainer">
+    <app-gameplay></app-gameplay>
+</div>
 }
