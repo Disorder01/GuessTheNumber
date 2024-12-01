@@ -6,6 +6,7 @@
     text-align: center;
     height: 100%;
     width: 70%;
+    min-width: 1500px;
     background-color: $primary-color;
 }
 
@@ -18,9 +19,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 300px;
-    min-height: 300px;
-    max-height: 300px;
+    height: 40%;
+    width: 100%;
+  //  min-height: 300px;
+  //  max-height: 300px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 10px;
+}
+
+.containerItem {
+    text-align: center;
+    justify-items: center;
+    width: 88%;
+}
+
+.guessArea {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 100%;
 }
 
 .playArea input {
@@ -71,8 +93,6 @@
     height: 100px;
     width: 100px;
     background-color: $secondary-color;
-    margin-left: -800px;
-    margin-top: -150px;
     border-radius: 50px;
     border: 3px solid $primary-color;
     
@@ -83,9 +103,4 @@
     font-size: 30px;
 }
 
-.showArrow {
-    margin-left: 800px;
-    margin-top: -110px;
-    font-size: 100px;
-}
 

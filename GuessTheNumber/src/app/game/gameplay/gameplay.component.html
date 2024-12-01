@@ -1,15 +1,26 @@
 <div class="overAll">
     <h2>Guess The Number</h2>
     <div class="playArea">
-        <label class="headLabel">Your Number:</label>
-        <input type="number" id="playAreaInput" [(ngModel)]="guessedNumber" 
-               [ngClass]="{'wrongInput': showHighlight, 'rightInput': showOtherHighlight}">
-        <button class="guessButton" (click)="guessNumber()">Guess!</button>
-        <div class="countDisplay">
-            <p>Count: </p>
-            <p class="count"> {{ counter }} </p>
+    <div class="container">
+        <div class="containerItem">
+            <div class="countDisplay">
+                <p>Count: </p>
+                <p class="count"> {{ counter }} </p>
+            </div>
+        </div>
+        <div class="containerItem">
+                <div class="guessArea">
+                    <label class="headLabel">Your Number:</label>
+                    <input type="number" id="playAreaInput" [(ngModel)]="guessedNumber" 
+                    [ngClass]="{'wrongInput': showHighlight, 'rightInput': showOtherHighlight}">
+                    <button class="guessButton" (click)="guessNumber()">Guess!</button>
+                </div>
+        </div>
+        <div class="containerItem">
+            <p>test</p>
         </div>
     </div>
+</div>
 
     
 
