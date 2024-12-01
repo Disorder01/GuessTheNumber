@@ -7,16 +7,12 @@ import { ActivatedRoute, Params } from '@angular/router';
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss'],
   animations: [
-    trigger('fadeInAnimation', [
-      state('void', style({ opacity: 0 })),
+    trigger('flyIn', [
       transition(':enter', [
-        style({ opacity: 0 }),
-        animate('500ms ease-in', style({ opacity: 1 })),
-      ]),
-      transition(':leave', [
-        animate('500ms ease-out', style({ opacity: 0 })),
-      ]),
-    ]),
+        style({ transform: 'translateY(100%)', opacity: 0 }),
+        animate('500ms ease-out', style({ transform: 'translateY(0)', opacity: 1 }))
+      ])
+    ])
   ]
 })
 export class GameComponent implements OnInit {
