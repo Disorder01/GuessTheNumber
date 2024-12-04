@@ -38,3 +38,26 @@
     font-size: 22px;
     margin: 15px;
 }
+
+.color-run-effect {
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(
+      90deg, 
+      red, blue, purple,
+    );
+    background-size: 300% 100%;
+    background-repeat: repeat; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorRun 36000s linear infinite;
+  }
+  
+  @keyframes colorRun {
+    0% {
+      background-position: 0% 50%; 
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
