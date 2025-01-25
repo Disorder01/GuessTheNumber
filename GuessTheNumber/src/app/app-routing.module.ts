@@ -5,6 +5,7 @@ import { GameComponent } from './game/game.component';
 import { TutorialComponent } from './tutorial/tutorial.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'play', component: GameComponent },
   { path: 'tutorial', component: TutorialComponent }
